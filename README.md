@@ -179,18 +179,20 @@ deve mudar de alugado para disponível;</p>
     <td><b>Colaborações</b></td>
   </tr>
   <tr>
-  ID de Estante
-  Prateleira
+    <td>ID de Estante </td>
+    <td>Prateleira </td>
   </tr>
   <tr>
-  Quarto
-  Categoria
+    <td>Quarto </td>
+    <td>Categoria </td>
   </tr>
   <tr>
-  Prateleiras
+    <td>Prateleiras </td>
+    <td> </td>
   </tr>
   <tr>
-  Categorias Comportadas
+    <td>Categorias Comportadas </td>
+    <td> </td>
   </tr>
 </table>
 
@@ -205,27 +207,28 @@ deve mudar de alugado para disponível;</p>
     <td><b>Colaborações</b></td>
   </tr>
   <tr>
-  ID de Prateleira
-  Estante
+    <td>ID de Prateleira </td>
+    <td>Estante </td>
   </tr>
   <tr>
-  Estante
-  Leitor
+    <td>Estante </td>
+    <td>Leitor </td>
   </tr>
   <tr>
-  Livros da Prateleira
-  Organizador
+    <td>Livros da Prateleira </td>
+    <td>Organizador </td>  
   </tr>
   <tr>
-  Espaço Vazio
-  Livro
+    <td>Espaço Vazio </td>
+    <td>Livro </td>
   </tr>
   <tr>
-  Categorias Comportadas
-  Categoria
+    <td>Categorias Comportadas </td>
+    <td>Categoria </td>
   </tr>
   <tr>
-  Alocar Novo Livro
+    <td>Alocar Novo Livro </td>
+    <td> </td>
   </tr>
 </table>
 
@@ -240,25 +243,27 @@ deve mudar de alugado para disponível;</p>
     <td><b>Colaborações</b></td>
   </tr>
   <tr>
-  Nome
-  Estante
+    <td>Nome </td>
+    <td>Estante </td>
   </tr>
   <tr>
-  Localização nas Prateleiras
-  Prateleira
+    <td>Localização nas Prateleiras </td>
+    <td>Prateleira </td>
   </tr>
   <tr>
-  Livros
-  Livro
+    <td>Livros </td>
+    <td>Livro </td>
   </tr>
   <tr>
-  Categoria Mãe
+    <td>Categoria Mãe </td>
+    <td> </td>
   </tr>
   <tr>
-  Categorias Filhas
+    <td>Categorias Filhas </td>
+    <td> </td>
   </tr>
   <tr>
-  Gerar nova filha
+    <td>Gerar nova filha </td>
+    <td> </td> 
   </tr>
 </table>
-
