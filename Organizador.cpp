@@ -18,7 +18,7 @@ Organizador::Organizador() {
     this->username = "nenhum";
     this->name = "NINGUEM";
 }
-void Organizador::buscarUsuario(std::string username){
+void Organizador::fazerLogin(std::string username) {
     std::ifstream f("../Database/Usuarios/organizadores.csv",std::ios::in);
     char linha[200], categoria[50];
     std::string category;
