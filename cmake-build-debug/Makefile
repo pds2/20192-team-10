@@ -122,6 +122,33 @@ depend:
 	$(MAKE) -f CMakeFiles\20192_team_10.dir\build.make CMakeFiles/20192_team_10.dir/build
 .PHONY : 20192_team_10/fast
 
+Organizador.obj: Organizador.cpp.obj
+
+.PHONY : Organizador.obj
+
+# target to build an object file
+Organizador.cpp.obj:
+	$(MAKE) -f CMakeFiles\20192_team_10.dir\build.make CMakeFiles/20192_team_10.dir/Organizador.cpp.obj
+.PHONY : Organizador.cpp.obj
+
+Organizador.i: Organizador.cpp.i
+
+.PHONY : Organizador.i
+
+# target to preprocess a source file
+Organizador.cpp.i:
+	$(MAKE) -f CMakeFiles\20192_team_10.dir\build.make CMakeFiles/20192_team_10.dir/Organizador.cpp.i
+.PHONY : Organizador.cpp.i
+
+Organizador.s: Organizador.cpp.s
+
+.PHONY : Organizador.s
+
+# target to generate assembly for a file
+Organizador.cpp.s:
+	$(MAKE) -f CMakeFiles\20192_team_10.dir\build.make CMakeFiles/20192_team_10.dir/Organizador.cpp.s
+.PHONY : Organizador.cpp.s
+
 Usuario.obj: Usuario.cpp.obj
 
 .PHONY : Usuario.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... 20192_team_10
 	@echo ... edit_cache
+	@echo ... Organizador.obj
+	@echo ... Organizador.i
+	@echo ... Organizador.s
 	@echo ... Usuario.obj
 	@echo ... Usuario.i
 	@echo ... Usuario.s

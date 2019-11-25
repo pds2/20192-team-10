@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/Organizador.cpp">
+			<Option target="20192_team_10"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/Organizador.h">
+			<Option target="20192_team_10"/>
+		</Unit>
 		<Unit filename="C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/Usuario.cpp">
 			<Option target="20192_team_10"/>
 		</Unit>
