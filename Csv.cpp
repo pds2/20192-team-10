@@ -12,7 +12,7 @@ std::vector<std::string> Csv::parse_csv(std::string path_arquivo){
     std::string token;
     while ((pos = s.find(delimiter)) != std::string::npos) {
         token = s.substr(0, pos);
-        resposta.pushback(token);
+        resposta.push_back(token);
         std::cout << token << std::endl;
         s.erase(0, pos + delimiter.length());
     }
