@@ -1,3 +1,0 @@
-C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/cmake-build-debug/CMakeFiles/20192_team_10.dir
-C:/Users/User/Documents/Daniel/PDS2/Projeto Final/20192-team-10/cmake-build-debug/CMakeFiles/edit_cache.dir
