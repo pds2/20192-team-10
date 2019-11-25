@@ -25,7 +25,7 @@ class Usuario {
         void set_username(std::string username);
         std::string get_name();
         void set_name(std::string name);
-        virtual void buscarUsuario(std::string username);
+        virtual void fazerLogin(std::string username) =0;
 };
 
 
