@@ -10,7 +10,7 @@
 
 class Organizador : public Usuario{
     public:
-        Organizador(int id, std::string name, std::string username);
+        Organizador(std::string name, std::string username);
         Organizador();
         ~Organizador() = default;
         void fazerLogin(std::string username) override;
