@@ -5,7 +5,6 @@
 #include <fstream>
 
 std::vector<std::vector<std::string>> parse_csv(std::string path_arquivo){
-    std::vector<std::string> linha;
     std::vector<std::vector<std::string>> resposta;
     std::string s;
     char l[200];
@@ -13,12 +12,14 @@ std::vector<std::vector<std::string>> parse_csv(std::string path_arquivo){
     size_t pos = 0;
     std::string token;
     std::ifstream f(path_arquivo,std::ios::in);
+    int i=0;
     if(f.fail()){
         std::cout <<"no file"<<std::endl;
         return resposta;
     }
     f.getline(l,200);
     while (!f.eof()) {
+        std::vector<std::string> linha;
         f.getline(l,200);
         s=l;
         while ((pos = s.find(delimiter)) != std::string::npos) {
@@ -27,6 +28,7 @@ std::vector<std::vector<std::string>> parse_csv(std::string path_arquivo){
             s.erase(0, pos + delimiter.length());
         }
         resposta.push_back(linha);
+        i++;
     }
     f.close();
     return resposta;
