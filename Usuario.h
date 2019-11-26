@@ -10,7 +10,6 @@
 
 class Usuario {
     protected:
-        int id;
         std::string username;
         std::string name;
     //lista de livros alugados
@@ -19,13 +18,12 @@ class Usuario {
         Usuario();
         Usuario(int id, std::string username, std::string name);
         ~Usuario()= default;
-        int get_id();
-        void set_id(int id);
         std::string get_username();
         void set_username(std::string username);
         std::string get_name();
         void set_name(std::string name);
-        virtual void fazerLogin(std::string username) =0;
+        virtual void fazerLogin(std::string username)=0;
+        void fazerLogin(std::string username, std::string filepath);
 };
 
 

@@ -3,28 +3,36 @@
 //
 
 #include "Usuario.h"
+#include "Csv.h"
 #include <string>
 #include <iostream>
-#include <fstream>
+#include <vector>
 
 Usuario::Usuario() {
-    this->id = 0;
     this->username = "nenhum";
     this->name = "NINGUEM";
 }
 
 Usuario::Usuario(int id, std::string username, std::string name) {
-    this->id = id;
     this->name = name;
     this ->username = username;
 }
 
-int Usuario::get_id() {
-    return this->id;
-}
-
-void Usuario::set_id(int id) {
-    this->id = id;
+void Usuario::fazerLogin(std::string username, std::string filepath) {
+    unsigned int i;
+    std::vector<std::vector<std::string>> registros = parse_csv(filepath);
+    if (registros.empty()){
+        return;
+    }
+    for (i =0;i<registros.size();i++){
+        if (registros.at(i).at(0)==username){
+            this->username = registros.at(i).at(0);
+            this->name = registros.at(i).at(1);
+            std::cout << "Olá "<< this->name << std::endl;
+            return;
+        }
+    }
+    std::cout << "não foi encontrado nenhum usuario com esse username"<< std::endl;
 }
 
 std::string Usuario::get_name() {
