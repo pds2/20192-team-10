@@ -1,2 +1,3 @@
-id,user_name, nome, livros_alugados
-1,daniel,DANIEL MIRANDA,0
+user_name, nome, livros_alugados
+daniel,DANIEL MIRANDA,0
+lucas,LUCAS MIRANDA,0
