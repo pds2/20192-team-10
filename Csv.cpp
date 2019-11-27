@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 std::vector<std::vector<std::string>> parse_csv(std::string path_arquivo){
     std::vector<std::vector<std::string>> resposta;
@@ -51,6 +52,7 @@ std::vector<std::string> encontrarUsuario(std::string username, std::string file
 }
 
 void insereUsuario(std::string username, std::string nome, std::string filepath){
+    transform(nome.begin(), nome.end(), nome.begin(), ::toupper);
     std::string linha = username+","+nome+",0\n";
     std::ofstream f(filepath,std::ios::app);
     if(f.fail()){
