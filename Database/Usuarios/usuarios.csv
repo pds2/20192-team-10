@@ -1,3 +1,7 @@
-id, user_name, tipo_de_usuario,ativo
-1,daniel,organizador,1
-2,lucas,organizador,1
+user_name, tipo_de_usuario
+daniel,organizador
+lucas,organizador
+maria,free
+joana,free
+fernanda,premium
+valeria,premium
