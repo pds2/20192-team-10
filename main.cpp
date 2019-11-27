@@ -21,7 +21,7 @@ int main() {
 //    std::getline(std::cin,i);
 //    std::cout<<"username: "<<std::endl;
 //    std::getline(std::cin,user_name);
-    user.cadastrarNovoUsuario("jeanine","JEANINE VASCONCELOS",stoi(i));
+    user.cadastrarNovoUsuario("jeanine","Jeanine Vasconcelos",stoi(i));
     user.cadastrarNovoUsuario("paulo", "PAULO MIRANDA", 2);
     user.cadastrarNovoUsuario("rachel", "RACHEL MARINHO", 3);
     return 0;
