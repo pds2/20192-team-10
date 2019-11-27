@@ -19,20 +19,15 @@ Usuario::Usuario(int id, std::string username, std::string name) {
 }
 
 void Usuario::fazerLogin(std::string username, std::string filepath) {
-    unsigned int i;
-    std::vector<std::vector<std::string>> registros = parse_csv(filepath);
-    if (registros.empty()){
+    std::vector<std::string> encontrou;
+    encontrou = encontrarUsuario(username, filepath);
+    if (encontrou.at(0) == " "){
+        std::cout << "não foi encontrado nenhum usuario com esse username"<< std::endl;
         return;
     }
-    for (i =0;i<registros.size();i++){
-        if (registros.at(i).at(0)==username){
-            this->username = registros.at(i).at(0);
-            this->name = registros.at(i).at(1);
-            std::cout << "Olá "<< this->name << std::endl;
-            return;
-        }
-    }
-    std::cout << "não foi encontrado nenhum usuario com esse username"<< std::endl;
+    this->username = encontrou.at(0);
+    this->name = encontrou.at(1);
+    std::cout << "Olá "<< this->name << std::endl;
 }
 
 std::string Usuario::get_name() {
