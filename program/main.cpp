@@ -41,12 +41,14 @@ int main() {
                     case 2:{
                         Premium user = Premium();
                         user.fazerLogin(username);
+                        mostraMenu(user);
                         break;
                     }
 
                     case 3:{
                         Free user = Free();
                         user.fazerLogin(username);
+                        mostraMenu(user);
                         break;
                     }
 
