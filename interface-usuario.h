@@ -1,0 +1,1 @@
+void mostraMenu(Organizador user);
