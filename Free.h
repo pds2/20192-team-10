@@ -14,6 +14,10 @@ class Free : public Usuario {
         Free(std::string name, std::string username);
         ~Free()= default;
         void fazerLogin(std::string username) override;
+        void alugarLivro(Livro livro) override;
+        void devolverLivro(Livro livro) override;
+    private:
+        int permitirAluguel();
 };
 
 

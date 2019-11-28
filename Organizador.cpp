@@ -68,3 +68,13 @@ void Organizador::cadastrarNovoFree(std::string username, std::string nome) {
     filepath = "../Database/Usuarios/usuarios.csv";
     insereUsuario(username, filepath, 3);
 }
+
+void Organizador::alugarLivro(Livro livro) {
+    std::string filepath = "../Database/Usuarios/organizadores.csv";
+    alugaLivro(this->username,livro.get_titulo(),filepath);
+}
+
+void Organizador::devolverLivro(Livro livro){
+    std::string filepath = "../Database/Usuarios/organizadores.csv";
+    devolveLivro(this->username,livro.get_titulo(),filepath);
+}

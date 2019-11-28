@@ -15,6 +15,8 @@ class Organizador : public Usuario{
         ~Organizador() = default;
         void fazerLogin(std::string username) override;
         void cadastrarNovoUsuario(std::string username, std::string nome, int tipo);
+        void alugarLivro(Livro livro) override;
+        void devolverLivro(Livro livro) override;
 private:
     void cadastrarNovoOrganizador(std::string username, std::string nome);
     void cadastrarNovoPremium(std::string username, std::string nome);

@@ -14,6 +14,8 @@ class Premium : public Usuario{
         Premium(std::string name, std::string username);
         ~Premium() = default;
         void fazerLogin(std::string username) override;
+        void alugarLivro(Livro livro) override;
+        void devolverLivro(Livro livro) override;
 };
 
 

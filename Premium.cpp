@@ -3,6 +3,8 @@
 //
 
 #include "Premium.h"
+#include "Csv.h"
+
 Premium::Premium() {
     this->name = "NENHUM";
     this->username = "ninguem";
@@ -16,4 +18,12 @@ Premium::Premium(std::string name, std::string username) {
 void Premium::fazerLogin(std::string username) {
     std::string file_path = "../Database/Usuarios/premium.csv";
     Usuario::fazerLogin(username,file_path);
+}
+void Premium::alugarLivro(Livro livro) {
+    std::string filepath = "../Database/Usuarios/premium.csv";
+    alugaLivro(this->username,livro.get_titulo(),filepath);
+}
+void Premium::devolverLivro(Livro livro) {
+    std::string filepath = "../Database/Usuarios/premium.csv";
+    devolveLivro(this->username,livro.get_titulo(),filepath);
 }
