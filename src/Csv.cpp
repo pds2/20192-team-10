@@ -185,6 +185,7 @@ void alugaLivro(std::string username, std::string titulo, std::string filepath){
         dadosUsuario.at(1).at(ultima_coluna).append(titulo);
     }
     atualiza_csv(dadosUsuario,filepath);
+    std::cout<<"aluguel realizado com sucesso\n";
 }
 
 void devolveLivro(std::string username, std::string titulo, std::string filepath){

@@ -5,6 +5,7 @@
 #include "Organizador.h"
 #include "Free.h"
 #include "Premium.h"
+#include "interface-usuario.h"
 #include "Csv.h"
 
 int main() {
@@ -33,6 +34,7 @@ int main() {
                     case 1:{
                         Organizador user = Organizador();
                         user.fazerLogin(username);
+                        mostraMenu(user);
                         break;
                     }
 

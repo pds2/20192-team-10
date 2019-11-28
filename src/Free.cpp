@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "Usuario.h"
 #include "Csv.h"
 Free::Free() {
     this->name = "NINGUEM";
@@ -28,9 +29,7 @@ int Free::permitirAluguel(){
     std::vector<std::vector<std::string>>dadosUsuario = {{"user_name", "nome", "livros_alugados"}};
     dadosUsuario.push_back(encontrarUsuario(this->username,file_path));
     unsigned int ultima_coluna =dadosUsuario.at(1).size()-1;
-    unsigned int i=0;
     std::string alugados =dadosUsuario.at(1).at(ultima_coluna);
-    size_t pos = 0;
     size_t n = std::count(alugados.begin(), alugados.end(), '/');
     if(n<2){
         return 1;
