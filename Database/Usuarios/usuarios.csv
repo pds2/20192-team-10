@@ -1,7 +1,7 @@
-user_name, tipo_de_usuario
+user_name,nome,livros_alugados
 daniel,organizador
 lucas,organizador
+valeria,premium
+fernanda,premium
 maria,free
 joana,free
-fernanda,premium
-valeria,premium
