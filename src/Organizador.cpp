@@ -72,6 +72,7 @@ void Organizador::cadastrarNovoFree(std::string username, std::string nome) {
 void Organizador::alugarLivro(Livro livro) {
     std::string filepath = "../Database/Usuarios/organizadores.csv";
     alugaLivro(this->username,livro.get_titulo(),filepath);
+    this->livros_alugados.push_back(livro.get_titulo());
 }
 
 void Organizador::devolverLivro(Livro livro){

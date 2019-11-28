@@ -44,6 +44,7 @@ void Free::alugarLivro(Livro livro) {
         return;
     }
     std::cout<<"Você já alugou o máximo de livros permitidos para um membro Free"<<std::endl;
+    this->livros_alugados.push_back(livro.get_titulo());
 }
 void Free::devolverLivro(Livro livro){
     std::string filepath = "../Database/Usuarios/free.csv";
