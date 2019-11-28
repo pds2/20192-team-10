@@ -8,21 +8,58 @@
 #include "Csv.h"
 
 int main() {
-    std::string user_name;
-    std::vector<std::vector<std::string>> resposta;
-    std::getline(std::cin,user_name);;
-    std::string nome;
-    std::string i = "1";
-    Organizador user = Organizador();
-    user.fazerLogin("daniel");
-//    std::cout<<"Nome do novo usuario: "<<std::endl;
-//    std::getline(std::cin,nome);
-//    std::cout<<"tipo de usuario:"<<std::endl;
-//    std::getline(std::cin,i);
-//    std::cout<<"username: "<<std::endl;
-//    std::getline(std::cin,user_name);
-    user.cadastrarNovoUsuario("jeanine","Jeanine Vasconcelos",stoi(i));
-    user.cadastrarNovoUsuario("paulo", "PAULO MIRANDA", 2);
-    user.cadastrarNovoUsuario("rachel", "RACHEL MARINHO", 3);
+    std::string tipo_conta;
+    int conta;
+    std::string username;
+
+        std::cout<<"\tSISTEMA DE BIBLIOTECA\n\nselecione seu tipo de conta cadastrado:\n";
+        std::cout<<"(1)Organizador\n(2)Premium\n(3)Free\n";
+        std::cout<<"para selecionar digite o numero da opcao\n";
+        std::cout<<"para sair digite:\tsair\n";
+
+    while(1){
+        std::getline(std::cin,tipo_conta);
+        if(tipo_conta == "sair"){
+            break;
+        }
+        try{
+            if(stoi(tipo_conta)>0&&stoi(tipo_conta)<4){
+                conta =stoi(tipo_conta);
+                std::cout<<"OK\n";
+                std::cout<<"digite seu usuario no campo a baixo\n";
+                std::cout<<"login:\n";
+                std::getline(std::cin,username);
+                switch(conta){
+                    case 1:{
+                        Organizador user = Organizador();
+                        user.fazerLogin(username);
+                        break;
+                    }
+
+                    case 2:{
+                        Premium user = Premium();
+                        user.fazerLogin(username);
+                        break;
+                    }
+
+                    case 3:{
+                        Free user = Free();
+                        user.fazerLogin(username);
+                        break;
+                    }
+
+                }
+                break;
+            }
+            else{
+                std::cout<<"entrada invalida\n";
+            }
+        }
+        catch(std::invalid_argument){
+            std::cout<<"entrada invalida\n";
+        }
+        }
+
+
     return 0;
 }
