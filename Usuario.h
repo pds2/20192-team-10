@@ -8,23 +8,28 @@
 
 #include <string>
 #include <vector>
+#include "Livro.h"
 
 class Usuario {
     protected:
         std::string username;
         std::string name;
-    //lista de livros alugados
+        std::vector<std::string> livros_alugados;
 
     public:
         Usuario();
-        Usuario(int id, std::string username, std::string name);
+        Usuario(std::string username, std::string name, std::vector<std::string> livros_alugados);
         ~Usuario()= default;
         std::string get_username();
         void set_username(std::string username);
         std::string get_name();
         void set_name(std::string name);
+        std::vector<std::string> get_livros_alugados();
+        void set_livros_alugados(std::vector<std::string> livros_alugados);
         virtual void fazerLogin(std::string username)=0;
         void fazerLogin(std::string username, std::string filepath);
+        virtual void alugarLivro(Livro livro)=0;
+        virtual void devolverLivro(Livro livro)=0;
 };
 
 

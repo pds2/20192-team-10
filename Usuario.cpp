@@ -9,13 +9,15 @@
 #include <vector>
 
 Usuario::Usuario() {
-    this->username = "nenhum";
-    this->name = "NINGUEM";
+    this->username = "";
+    this->name = "";
+    this->livros_alugados ={} ;
 }
 
-Usuario::Usuario(int id, std::string username, std::string name) {
+Usuario::Usuario(std::string username, std::string name, std::vector<std::string> livros_alugados) {
     this->name = name;
     this ->username = username;
+    this->livros_alugados =livros_alugados;
 }
 
 void Usuario::fazerLogin(std::string username, std::string filepath) {
@@ -44,4 +46,12 @@ std::string Usuario::get_username() {
 
 void Usuario::set_username(std::string username) {
     this->username = username;
+}
+
+std::vector<std::string> Usuario::get_livros_alugados(){
+    return this->livros_alugados;
+}
+
+void Usuario::set_livros_alugados(std::vector<std::string> livros_alugados){
+    this->livros_alugados = livros_alugados;
 }
