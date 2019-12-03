@@ -200,3 +200,16 @@
 <p>fazerLogin(std::string username): Override de método virtual da classe mãe, passa o username e o lugar do arquivo que contém a base de dados dos usuários premium para a função fazerLogin(std::string username, std::string filepath) implementada na classe mãe</p>
 <p>alugarLivro(Livro livro): Override de método virtual da classe mãe, busca o livro na base de dados e, caso ele não esteja alugado, aluga ele para o usuário, mudando tanto o atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
 <p>devolverLivro(Livro livro): Override de método virtual da classe mãe, retira o livro tanto do atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
+
+<h4> Classe Free </h4>
+<p>É a classe de usuários que não pagaram por uma assinatura, podendo assim alugar apenas três livros</p>
+
+<p><b>Atributos</b></p>
+<p>Apenas os herdados da classe mãe</p>
+
+<p><b>Métodos</b></p>
+<p>Construtores que recebe tanto nenhum parâmetro, como de parâmetro todos os atributos</p>
+<p>Destrutor default </p>
+<p>fazerLogin(std::string username): Override de método virtual da classe mãe, passa o username e o lugar do arquivo que contém a base de dados dos usuários premium para a função fazerLogin(std::string username, std::string filepath) implementada na classe mãe</p>
+<p>alugarLivro(Livro livro): Override de método virtual da classe mãe, busca o livro na base de dados e, caso ele não esteja alugado e o usuário não tenha alugado um total de três livros, aluga ele para o usuário, mudando tanto o atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
+<p>devolverLivro(Livro livro): Override de método virtual da classe mãe, retira o livro tanto do atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
