@@ -2,6 +2,7 @@ void mostraMeusLivros(Organizador user);
 void mostraMenu(Organizador user);
 void mostraAlugarLivro(Organizador user);
 void mostraDevolverLivro(Organizador user);
+void mostraCadastrarUsuario(Organizador user);
 
 void mostraMeusLivros(Free user);
 void mostraMenu(Free user);

@@ -23,10 +23,12 @@ Usuario::Usuario(std::string username, std::string name, std::vector<std::string
 void Usuario::fazerLogin(std::string username, std::string filepath) {
     std::vector<std::string> encontrou;
     std::vector<std::string>livros_alugados;
-    encontrou = encontrarUsuario(username, filepath);
-    if (encontrou.at(0) == " "){
+    try{
+        encontrou = encontrarUsuario(username, filepath);
+    }
+    catch(std::runtime_error){
         std::cout << "não foi encontrado nenhum usuario com esse username"<< std::endl;
-        return;
+        throw std::runtime_error("nenhum usuario encontrado");
     }
     this->username = encontrou.at(0);
     this->name = encontrou.at(1);
@@ -42,7 +44,6 @@ void Usuario::fazerLogin(std::string username, std::string filepath) {
     token = s.substr(0, pos);
     livros_alugados.push_back(token);
     this->livros_alugados = livros_alugados;
-    std::cout << "Olá "<< this->name << std::endl;
 
 }
 

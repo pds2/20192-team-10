@@ -44,14 +44,14 @@ std::vector<std::string> encontrarUsuario(std::string username, std::string file
     std::vector<std::vector<std::string>> registros = parse_csv(filepath);
     std::vector<std::string> nenhum = {" "};
     if (registros.empty()){
-        return nenhum;
+        throw std::runtime_error("Nenhum usuario cadastrado");
     }
     for (i =0;i<registros.size()-1;i++){
         if (registros.at(i).at(0)==username) {
             return registros.at(i);
         }
     }
-    return  nenhum;
+    throw std::runtime_error("usuario não encontrado");
 }
 
 void insereUsuario(std::string username, std::string nome, std::string filepath){
@@ -103,26 +103,6 @@ std::vector<std::string> encontraLivroPorTitulo(std::string titulo){
         }
     }
     return  nenhum;
-}
-
-std::vector<std::vector<std::string>> encontraLivroPorAutor(std::string autor){
-    std::string filepath = "../Database/Livros/livros.csv";
-    unsigned int i=0;
-    size_t pos = 0;
-    transform(autor.begin(), autor.end(), autor.begin(), ::toupper);
-    std::vector<std::vector<std::string>> registros = parse_csv(filepath);
-    std::vector<std::vector<std::string>> resposta;
-    std::vector<std::string> nenhum = {" "};
-    if (registros.empty()){
-        return registros;
-    }
-    for (i =0;i<registros.size()-1;i++){
-        pos = registros.at(i).at(1).find(autor);//acha substring
-        if (pos < registros.at(i).at(1).size()) {
-            resposta.push_back(registros.at(i)) ;
-        }
-    }
-    return  resposta;
 }
 
 void atualiza_csv(std::vector<std::vector<std::string>> dados,std::string path_arquivo){

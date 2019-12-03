@@ -8,6 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include "Usuario.h"
+#include "Livro.h"
 #include "Csv.h"
 Free::Free() {
     this->name = "NINGUEM";

@@ -5,6 +5,7 @@
 #include "Organizador.h"
 #include "Usuario.h"
 #include "Csv.h"
+#include "Livro.h"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -12,10 +13,12 @@
 Organizador::Organizador(std::string name, std::string username) {
     this->username = username;
     this->name = name;
+    this->livros_alugados ={} ;
 }
 Organizador::Organizador() {
     this->username = "nenhum";
     this->name = "NINGUEM";
+    this->livros_alugados ={} ;
 }
 void Organizador::fazerLogin(std::string username) {
     std::string file_path = "../Database/Usuarios/organizadores.csv";
@@ -25,11 +28,10 @@ void Organizador::fazerLogin(std::string username) {
 void Organizador::cadastrarNovoUsuario(std::string username, std::string nome, int tipo)  {
     std::string arquivo_usuarios = "../Database/Usuarios/usuarios.csv";
     std::vector<std::string> encontrou;
-    encontrou = encontrarUsuario(username, arquivo_usuarios);
-    if(encontrou.at(0)==username){
-        std::cout<< "este username ja esta sendo usado por outra pessoa"<<std::endl;
+    try{
+        encontrou = encontrarUsuario(username, arquivo_usuarios);
     }
-    else{
+    catch(std::runtime_error){
         switch (tipo){
             case 1:
                 cadastrarNovoOrganizador(username,nome);
@@ -45,7 +47,9 @@ void Organizador::cadastrarNovoUsuario(std::string username, std::string nome, i
                 return;
         }
         std::cout<<"cadastro realizado com sucesso"<<std::endl;
+        return;
     }
+    std::cout<< "este username ja esta sendo usado por outra pessoa"<<std::endl;
 }
 
 void Organizador::cadastrarNovoOrganizador(std::string username, std::string nome) {
@@ -72,7 +76,10 @@ void Organizador::cadastrarNovoFree(std::string username, std::string nome) {
 void Organizador::alugarLivro(Livro livro) {
     std::string filepath = "../Database/Usuarios/organizadores.csv";
     alugaLivro(this->username,livro.get_titulo(),filepath);
-    this->livros_alugados.push_back(livro.get_titulo());
+    std::vector<std::string> novoLivrosAlugados;
+    novoLivrosAlugados = get_livros_alugados();
+    novoLivrosAlugados.push_back(livro.get_titulo());
+    set_livros_alugados(novoLivrosAlugados);
 }
 
 void Organizador::devolverLivro(Livro livro){

@@ -13,12 +13,13 @@ int main() {
     int conta;
     std::string username;
 
-        std::cout<<"\tSISTEMA DE BIBLIOTECA\n\nselecione seu tipo de conta cadastrado:\n";
+
+
+    while(1){
+        std::cout<<"\n\tSISTEMA DE BIBLIOTECA\n\nselecione seu tipo de conta cadastrado:\n";
         std::cout<<"(1)Organizador\n(2)Premium\n(3)Free\n";
         std::cout<<"para selecionar digite o numero da opcao\n";
         std::cout<<"para sair digite:\tsair\n";
-
-    while(1){
         std::getline(std::cin,tipo_conta);
         if(tipo_conta == "sair"){
             break;
@@ -33,33 +34,47 @@ int main() {
                 switch(conta){
                     case 1:{
                         Organizador user = Organizador();
-                        user.fazerLogin(username);
+                        try{
+                            user.fazerLogin(username);
+                        }
+                        catch(std::runtime_error &e){
+                            break;
+                        }
                         mostraMenu(user);
-                        break;
+                        return 0;
                     }
 
                     case 2:{
                         Premium user = Premium();
-                        user.fazerLogin(username);
+                        try{
+                            user.fazerLogin(username);
+                        }
+                        catch(std::runtime_error &e){
+                            break;
+                        }
                         mostraMenu(user);
-                        break;
+                        return 0;
                     }
 
                     case 3:{
                         Free user = Free();
-                        user.fazerLogin(username);
+                        try{
+                            user.fazerLogin(username);
+                        }
+                        catch(std::runtime_error &e){
+                            break;
+                        }
                         mostraMenu(user);
-                        break;
+                        return 0;
                     }
 
                 }
-                break;
             }
             else{
                 std::cout<<"entrada invalida\n";
             }
         }
-        catch(std::invalid_argument){
+        catch(std::invalid_argument &e){
             std::cout<<"entrada invalida\n";
         }
         }
