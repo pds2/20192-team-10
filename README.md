@@ -184,6 +184,19 @@
 <p>Destrutor default </p>
 <p>getters e setters para todos os atributos</p>
 <p>fazerLogin(std::string username): Método virtual puro implementado nas classes filhas</p>
-<p>fazerLogin(std::string username, std::string filepath): Método que busca o usuário pelo username na base de dados passada pelo filepath, cada tipo de usuário tem um arquivo diferente como base de dados, essa função é chamada dentro da implementação de fazerLogin(std::string username) de cada uma das classes filhas passando o filepath correspondente a base de dados daquela classe</p>
+<p>fazerLogin(std::string username, std::string filepath): Método que busca o usuário pelo username na base de dados passada pelo filepath, cada tipo de usuário tem um arquivo diferente como base de dados, e atualiza o valor de seus atributos dado o resultado da busca. Essa função é chamada dentro da implementação de fazerLogin(std::string username) de cada uma das classes filhas passando o filepath correspondente a base de dados daquela classe</p>
 <p>alugarLivro(Livro livro): Método virtual puro implementado nas classes filhas</p>
 <p>devolverLivro(Livro livro): Método virtual puro implementado nas classes filhas</p>
+
+<h4> Classe Premium </h4>
+<p>É a classe de usuários que pagaram por uma assinatura, podendo assim alugar uma quantidade ilimitada de livros</p>
+
+<p><b>Atributos</b></p>
+<p>Apenas os herdados da classe mãe</p>
+
+<p><b>Métodos</b></p>
+<p>Construtores que recebe tanto nenhum parâmetro, como de parâmetro todos os atributos</p>
+<p>Destrutor default </p>
+<p>fazerLogin(std::string username): Override de método virtual da classe mãe, passa o username e o lugar do arquivo que contém a base de dados dos usuários premium para a função fazerLogin(std::string username, std::string filepath) implementada na classe mãe</p>
+<p>alugarLivro(Livro livro): Override de método virtual da classe mãe, busca o livro na base de dados e, caso ele não esteja alugado, aluga ele para o usuário, mudando tanto o atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
+<p>devolverLivro(Livro livro): Override de método virtual da classe mãe, retira o livro tanto do atributo livros_alugados, quanto nas bases de dados de livros e de usuários premium</p>
