@@ -170,13 +170,16 @@
 ## Implementação
 ### Usuários
 <p>Nesta biblioteca existem diferentes tipos de usuários: Organizadores, que além de alugar livros também cadastram outros usuários, Premium, que podem alugar quantos livros quiserem e Free, que tem um limite de locação de três livros. Para a implementação desses diferentes tipos foi criada uma classa mãe, Usuário, e as demais categorias foram colocadas como classes filhas.</p>
-### Classe Usuário
+
+<h4> Classe Usuário </h4>
 <p>É a classe mãe de todos os tipos de usuário, utilizada para manter em um só lugar os atributos e as funções comuns a todos os outros tipos de usuários</p>
-#### Atributos
+
+<p><b>Atributos</b></p>
 <p>username: uma string que contém o username do usuário</p>
 <p>nome: uma string que contém o nome do usuário</p>
 <p>livros_alugados: um vetor de strings que contém os livros que o usuário tem consigo</p>
-#### Métodos
+
+<p><b>Métodos</b></p>
 <p>Construtores que recebe tanto nenhum parâmetro, como de parâmetro todos os atributos</p>
 <p>Destrutor default </p>
 <p>getters e setters para todos os atributos</p>
