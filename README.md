@@ -244,3 +244,16 @@
 <p>Construtores que recebe tanto nenhum parâmetro, como de parâmetro todos os atributos</p>
 <p>Destrutor default </p>
 <p>getters e setters para todos os atributos</p>
+
+### Biblioteca Csv
+<p>Esta é uma biblioteca que implementa funções úteis que manipulam os arquivos .csv que são usados como base de dados para as informações tanto de usuários quanto de livros</p>
+
+<h4>Funções</h4>
+<p>parse_csv(std::string path_arquivo): lê o arquivo e retorna um vetor de vetor de strings, onde cada vetor de strings é uma linha do arquivo, cada string sendo uma informação de um dos campos</p>
+<p>encontrarUsuario (std::string username, std::string filepath): retorna um vetor de strings que representa o usuário no banco de dados, ele procura no arquivo passado pela string filepath pelo username, também passado pelo parâmetro, isso é possível pois em todos os arquivos de usuário a coluna de username está na mesma posição</p>
+<p>insereUsuario(std::string username, std::string nome, std::string filepath): insere as informações do usuário, com o livros_alugados sendo considerado vazio, no final do arquivo determinado por filepath, usado para os arquivos de um tipo de usuário específico, pois todos tem o mesmo formato</p>
+<p>insereUsuario(std::string username, std::string filepath, int tipo): método utilizado para inserir um usuário no final do arquivo da base de dados geral</p>
+<p>encontraLivroPorTitulo(std::string titulo): retorna vetor de string wue representa a linha ocupada pelo livro na base de dados, contendo as informações do mesmo</p>
+<p>atualiza_csv(std::vector<std::vector<std::string>> dados ,std::string path_arquivo): recebe uma linha com as informações a serem atualizadas e atualiza essa linha no arquivo passado pelo path_arquivo</p>
+<p>alugaLivro(std::string username, std::string titulo, std::string filepath): muda a informação de alugado_por na base de dados do livro passado para o username passado</p>
+<p>devolveLivro(std::string username, std::string titulo, std::string filepath): atualiza as informações do livro removendo o username de quem tinha alugado o livro</p>
