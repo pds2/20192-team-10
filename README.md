@@ -167,6 +167,113 @@
   </tr>
 </table>
 
+## Organização dos arquivos
+
+### Pasta Database
+
+<p> Pasta onde se encontra os arquivos .csv utilizados como base de dados para o sistema</p>
+<h4>Pasta Livros</h4>
+<p>onde se localiza o arquivo livros.csv, utilizada como base de dados de livros da bibliotaca</p>
+<table>
+  <tr>
+    <th>Exemplo de livros existentes na base</th>
+   </tr>
+  <tr>
+    <td><b>Título</b></td>
+  </tr>
+  <tr>
+    <td>A REVOLUÇÃO DOS BICHOS</td>
+  </tr>
+  <tr>
+    <td>A ERA DOS IMPÉRIOS</td>
+  </tr>
+  <tr>
+    <td>NEUROMANCER</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+  </tr>
+  <tr>
+    <td>OS HOMENS QUE NAO AMAVAM AS MULHERES</td>
+  </tr>
+  <tr>
+    <td>1808</td>
+  </tr>
+  <tr>
+    <td>HARRY POTTER E O ENIGMA DO PRÍNCIPE</td>
+  </tr>
+</table>
+
+<h4>Pasta Usuarios</h4>
+<p>Pasta com quatro arquivos .csv referente ao banco de dados dos usuários:</p>
+<p>usuarios.csv: contém username e tipo de usuário de todos os usuários cadastrados</p>
+<p>organizadores.csv, premium.csv, free.csv: cada um contém as informações de todos os usuários daquela categoria</p>
+<table>
+  <tr>
+    <th>Exemplo de organizadores existentes na base</th>
+  </tr>
+  <tr>
+    <td><b>username</b></td>
+  </tr>
+  <tr>
+    <td>daniel</td>
+  </tr>
+  <tr>
+    <td>lucas</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Exemplo de usuários premium existentes na base</th>
+  </tr>
+  <tr>
+    <td><b>username</b></td>
+  </tr>
+  <tr>
+    <td>valeria</td>
+  </tr>
+  <tr>
+    <td>fernanda</td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Exemplo de usuários free existentes na base</th>
+  </tr>
+  <tr>
+    <td><b>username</b></td>
+  </tr>
+  <tr>
+    <td>joana</td>
+  </tr>
+  <tr>
+    <td>maria</td>
+  </tr>
+</table>
+### Pasta bin
+
+<p>Onde se encontra o executável main</p>
+
+### Pasta build
+
+<p>onde se encontra os objetos (*.o) utilizados para a construção do executável</p>
+
+### Pasta include
+
+<p>Onde se encontram os headers (*.h) de todas as classes e módulos implementados</p>
+
+### Pasta program
+
+<p>Onde se encontra o main.c</p>
+
+### Pasta src
+
+<p>Onde de encontra a implementação (*.cpp) de todas as classes e módulos implementados</p>
+
+### Makefile
+
+<p>Presente fora das pastas supracitadas, para compilar o programa é importante que o comando make seja feito na mesma pasta onde se encontra o Makefile</p>
+
 ## Implementação
 ### Usuários
 <p>Nesta biblioteca existem diferentes tipos de usuários: Organizadores, que além de alugar livros também cadastram outros usuários, Premium, que podem alugar quantos livros quiserem e Free, que tem um limite de locação de três livros. Para a implementação desses diferentes tipos foi criada uma classa mãe, Usuário, e as demais categorias foram colocadas como classes filhas.</p>
