@@ -245,8 +245,8 @@
 <p>Destrutor default </p>
 <p>getters e setters para todos os atributos</p>
 
-### Biblioteca Csv
-<p>Esta é uma biblioteca que implementa funções úteis que manipulam os arquivos .csv que são usados como base de dados para as informações tanto de usuários quanto de livros</p>
+### Módulo Csv
+<p>Esta é um módulo que implementa funções úteis que manipulam os arquivos .csv que são usados como base de dados para as informações tanto de usuários quanto de livros</p>
 
 <h4>Funções</h4>
 <p>parse_csv(std::string path_arquivo): lê o arquivo e retorna um vetor de vetor de strings, onde cada vetor de strings é uma linha do arquivo, cada string sendo uma informação de um dos campos</p>
@@ -257,3 +257,12 @@
 <p>atualiza_csv(std::vector<std::vector<std::string>> dados ,std::string path_arquivo): recebe uma linha com as informações a serem atualizadas e atualiza essa linha no arquivo passado pelo path_arquivo</p>
 <p>alugaLivro(std::string username, std::string titulo, std::string filepath): muda a informação de alugado_por na base de dados do livro passado para o username passado</p>
 <p>devolveLivro(std::string username, std::string titulo, std::string filepath): atualiza as informações do livro removendo o username de quem tinha alugado o livro</p>
+
+### Módulo interface-usuario
+<p>Esse é um módulo que implementa funções que tornam possível o acesso do usuário às funcionalidades da biblioteca. Em qualquer momento que o usuário escrever "sair" ele sai da tela atual.</p>
+<h4>Funções</h4>
+<p>mostraMeusLivros(user): mostra a tela que imprime na tela os livros alugados pelo usuário no momento</p>
+<p>mostraMenu(Organizador user): mostra as opções que o usuário pode escolher para utilizar o sistema</p>
+<p>mostraAlugarLivro(user): recebe do usuário um título, busca o livro por titulo (como a função de csv procura por substring o nome não precisa estar completo) e retorna o resultado</p>
+<p>mostraDevolverLivro(user): apresenta para o usuário a lista de livros que ele têm alugado para que ele escolha qual opção ele irá devolver</p>
+<p>mostraCadastrarUsuario(Organizador user): opção que aparece apenas para organizadores, recebe as informações do usuário e retorna o resultado (se conseguiu cadastrar ou se o username já existia)</p>
