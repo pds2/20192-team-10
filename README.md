@@ -230,3 +230,17 @@
 <p>cadastrarNovoOrganizador(std::string username, std::string nome): insere usuário no banco de dados de organizadores e no banco de dados geral</p>
 <p>cadastrarNovoPremium(std::string username, std::string nome): insere usuário no banco de dados de usuários premium e no banco de dados geral</p>
 <p>cadastrarNovoFree(std::string username, std::string nome): insere usuário no banco de dados de usuários free e no banco de dados geral</p>
+
+### Classe Livro
+<p>Esta classe serve para armazenar as informações das obras contidas na biblioteca.</p>
+
+<h4>Atributos</h4>
+<p>titulo: string que armazena o titulo do livro</p>
+<p>autor: string que armazena o autor da obra</p>
+<p>localizacao: string que guarda a localização física do livro</p>
+<p>alugado_por: string que contém quem está com o livro alugado</p>
+
+<h4>Métodos</h4>
+<p>Construtores que recebe tanto nenhum parâmetro, como de parâmetro todos os atributos</p>
+<p>Destrutor default </p>
+<p>getters e setters para todos os atributos</p>
