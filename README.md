@@ -266,3 +266,6 @@
 <p>mostraAlugarLivro(user): recebe do usuário um título, busca o livro por titulo (como a função de csv procura por substring o nome não precisa estar completo) e retorna o resultado</p>
 <p>mostraDevolverLivro(user): apresenta para o usuário a lista de livros que ele têm alugado para que ele escolha qual opção ele irá devolver</p>
 <p>mostraCadastrarUsuario(Organizador user): opção que aparece apenas para organizadores, recebe as informações do usuário e retorna o resultado (se conseguiu cadastrar ou se o username já existia)</p>
+
+### main
+<p>Imprime para o usuário opções para login, recebe o username, faz o login e chama mostrarMenu() do módulo interface-usuário</p>
