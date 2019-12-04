@@ -1,4 +1,4 @@
-user_name,nome,livros_alugados
+user_name,tipo de usuario
 daniel,organizador
 lucas,organizador
 valeria,premium
@@ -6,3 +6,4 @@ fernanda,premium
 maria,free
 joana,free
 rachel,premium
+paulo,free
